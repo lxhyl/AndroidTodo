@@ -148,7 +148,7 @@ export default {
       this.addData.id = new Date().getTime();
       for (let obj in this.addData) {
         if (this.addData[obj] == "") {
-          this.$message("内容不能为空");
+          this.$message("error");
           return;
         }
       }

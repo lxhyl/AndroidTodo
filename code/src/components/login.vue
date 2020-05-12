@@ -85,23 +85,23 @@ export default {
   methods: {
     logupfn() {
       if (this.logup.mail == "") {
-        this.$message("邮箱不能为空");
+        this.$message("error");
         return;
       }
       if (this.logup.name == "") {
-        this.$message("姓名不能为空");
+        this.$message("error");
         return;
       }
       if (this.logup.password1 == "") {
-        this.$message("密码不能为空");
+        this.$message("error");
         return;
       }
       if (this.logup.password2 == "") {
-        this.$message("请重复输入密码");
+        this.$message("error");
         return;
       }
       if (this.logup.password1 != this.logup.password2) {
-        this.$message("两次密码不一致");
+        this.$message("error");
         return;
       }
       this.$axios
@@ -115,11 +115,11 @@ export default {
     loginfn() {
       console.log(this.loginForm);
       if (this.loginForm.name == "") {
-        this.$message("名字不能为空");
+        this.$message("error");
         return;
       }
       if (this.loginForm.password == "") {
-        this.$message("密码不能为空");
+        this.$message("error");
         return;
       }
       this.$axios
@@ -132,13 +132,13 @@ export default {
                 localStorage.setItem('name',this.loginForm.name);
                   localStorage.setItem('cookieName',this.loginForm.name);
             }
-            this.$message("登陆成功");
+            this.$message("Log in Successfully");
             this.$router.push('/home');
           }
           
         })
         .catch(err => {
-           this.$message("登陆失败，请检查用户名或密码");
+           this.$message("error");
         })
     },
     gotoLogin() {
