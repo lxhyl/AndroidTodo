@@ -7,7 +7,6 @@ var app = http.createServer();
 app.on('request', function (req, res) {
     var URL = url.parse(req.url, true);
     var NAME = URL.query.name;
-
     //注册
     if (URL.pathname == "/logup") {
         let mail = URL.query.mail;
@@ -52,9 +51,16 @@ app.on('request', function (req, res) {
             buffer.push(chunk);
         })
         req.on('end', function () {
+           
             var addData = JSON.parse(buffer.toString());
             let name = addData.name;
+            console.log(name);
+            console.log(addData);
             fs.readFile(`./user/${name}.json`, function (err, data) {
+                if(err){
+                    res.writeHead(200, { 'Content-Type': 'text/plain,charset=utf-8' });
+                    res.end('error');
+                }
                 let json = JSON.parse(data.toString());
                 json.todo.push(addData);
                 let str = JSON.stringify(json);

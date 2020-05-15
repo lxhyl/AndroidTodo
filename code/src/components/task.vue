@@ -135,7 +135,7 @@ export default {
           return;
         }
       }
-      this.$axios.post("http://zhangpengfan.xyz//todo/addtodo", this.addData).then(res => {
+      this.$axios.post("http://zhangpengfan.xyz/todo/addtodo", this.addData).then(res => {
         this.reload();
         this.addData.title = this.addData.des = this.addData.startTime = this.addData.endTime = this.addData.name = this.addData.id =
           "";
@@ -145,7 +145,7 @@ export default {
     },
     //get数据
     getjson() {
-      this.$axios.get(`http://zhangpengfan.xyz//todo/getjson?name=${this.addData.name}`).then(res => {
+      this.$axios.get(`http://zhangpengfan.xyz/todo/getjson?name=${this.addData.name}`).then(res => {
         this.userjson = res.data;
         let arr = res.data.todo;
         function compare(property) {

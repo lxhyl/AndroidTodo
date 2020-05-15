@@ -76,10 +76,10 @@ export default {
       logupSucceed: false
     };
   },
-  mounted(){
-    let name = localStorage.getItem('name');
-    if(name){
-        this.$router.push('/home')
+  mounted() {
+    let name = localStorage.getItem("name");
+    if (name) {
+      this.$router.push("/home");
     }
   },
   methods: {
@@ -108,8 +108,9 @@ export default {
         .get(
           `http://zhangpengfan.xyz/todo/logup?mail=${this.logup.mail}&name=${this.logup.name}&password=${this.logup.password1}`
         )
-        .then(res => {
+        .then(() => {
           this.logupSucceed = true;
+          localStorage.setItem("cookieName", this.loginForm.name);
         });
     },
     loginfn() {
@@ -128,18 +129,17 @@ export default {
         )
         .then(res => {
           if (res.data == "succeed") {
-            if(this.loginForm.remember){
-                localStorage.setItem('name',this.loginForm.name);
-                  localStorage.setItem('cookieName',this.loginForm.name);
+            if (this.loginForm.remember) {
+              localStorage.setItem("name", this.loginForm.name);
+              localStorage.setItem("cookieName", this.logup.name);
             }
             this.$message("Log in Successfully");
-            this.$router.push('/home');
+            this.$router.push("/home");
           }
-          
         })
         .catch(err => {
-           this.$message("error");
-        })
+          this.$message("error");
+        });
     },
     gotoLogin() {
       this.activeName = "logintab";
@@ -150,14 +150,14 @@ export default {
 </script>
 
 <style scoped>
-.page{
-    background-color: aliceblue;
-    height: 100vh;
-    width: 100vw;
-    left:0;
-    top:0;
-    z-index: -1;
-    position:absolute;
+.page {
+  background-color: aliceblue;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  position: absolute;
 }
 .main {
   position: absolute;
