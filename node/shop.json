@@ -5,7 +5,7 @@
             "des":"Keep your dragon hydrate!",
             "jy":"5",
             "price":"10",
-            "img":"http://8.208.27.63/todoimg/water.png",
+            "img":"http://zhangpengfan.xyz/todoimg/water.png",
             "show":false
         },
         {
@@ -13,7 +13,7 @@
             "des":"You need to feed a Hungry dragon.",
             "jy":"40",
             "price":"60",
-            "img":"http://8.208.27.63/todoimg/hamburger.png",
+            "img":"http://zhangpengfan.xyz/todoimg/hamburger.png",
             "show":false
         },
         {
@@ -21,7 +21,7 @@
             "des":"Take your dragon out to have a barbeque!",
             "jy":"20",
             "price":"30",
-            "img":"http://8.208.27.63/todoimg/barbeque.png",
+            "img":"http://zhangpengfan.xyz/todoimg/barbeque.png",
             "show":false
         },
         {
@@ -29,7 +29,7 @@
             "des":"Everybody loves pizza.",
             "jy":"30",
             "price":"40",
-            "img":"http://8.208.27.63/todoimg/pizza.png",
+            "img":"http://zhangpengfan.xyz/todoimg/pizza.png",
             "show":false
         },
         {
@@ -37,7 +37,7 @@
             "des":"What’s inside?",
             "jy":"Uneatable",
             "price":"100",
-            "img":"http://8.208.27.63/todoimg/dragonEgg.png",
+            "img":"http://zhangpengfan.xyz/todoimg/dragonEgg.png",
             "show":false
         }
     ],
@@ -45,17 +45,17 @@
         {
             "name":"one",
             "des":"A happy normal dragon. Just feed them and they will grow.",
-            "img":"http://8.208.27.63/todoimg/Pics/d1lv1.png"
+            "img":"http://zhangpengfan.xyz/todoimg/Pics/d1lv1.png"
         },
         {
             "name":"two",
             "des":"Usually proud of their colour, they live near the water and love rainy day.",
-            "img":"http://8.208.27.63/todoimg/Pics/d2lv1.png"
+            "img":"http://zhangpengfan.xyz/todoimg/Pics/d2lv1.png"
         },
         {
             "name":"three",
             "des":"???",
-            "img":"http://8.208.27.63/todoimg/unkownPet.png"
+            "img":"http://zhangpengfan.xyz/todoimg/unkownPet.png"
         }
     ]
 }
